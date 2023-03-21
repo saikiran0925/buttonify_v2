@@ -1,0 +1,6 @@
+While adding buttons, even if we haven't given any description, it's creating a description div element.
+In Replies Buttons, need to make proper div for each option.
+Need to make changes in UI in such a way that the text "Buttonify" has to be properly aligned.
+Need to customize widget according to button_a57dbo and list_a57do
+Need to do some textual changes for the widget in replies_buttons.
+If we generateText using the widget then the label names of the input field is same like Option 1

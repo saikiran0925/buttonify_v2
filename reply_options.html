@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="icon" href="favigon.webp" type="image/png" />
+    <title>Reply Options Form</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="nav_bar.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.8/clipboard.min.js"></script>
+  </head>
+  <body>
+    <nav>
+      <div class="nav-logo">
+        <a href="index.html">
+          <img src="logo.png" alt="Simplify360 Logo" style="height: 50px" />
+        </a>
+        <h1 class="nav-text">Buttonify</h1>
+      </div>
+      <ul class="nav-menu">
+        <li><a href="buttons_a57.html">Buttons(A57)</a></li>
+        <li>
+          <a href="buttons_a57dbo.html" >Buttons(A57dbo)</a>
+        </li>
+        <li><a href="list_a57.html">List(A57)</a></li>
+        <li><a href="list_a57do.html">List(A57do)</a></li>
+        <a href="reply_options.html" class="active">Reply Options</a></li>
+      </ul>
+    </nav>
+    <form class="json-form">
+      <div class="text-container">
+      <div id = "replies">
+        <div id = "reply_0">
+      <label for="text">Option 1:</label>
+      <input type="text" id="text_0" name="text_0"  />
+      <div class="button-container text-center">
+        <button
+          type="button"
+          class="btn btn-danger remove-button"
+          onclick="removeButtonFunction(0)"
+        >
+          Remove
+        </button>
+      </div>
+    </div>
+    </div>
+  </div>
+    <div class="button-container text-center">
+      <button
+        type="button"
+        class="btn btn-primary"
+        data-bs-toggle="modal"
+        data-bs-target="#buttonModal"
+      >
+        Add Option
+      </button>
+    </div>
+      <div class="button-container text-center">
+        <button
+          type="button"
+          class="btn btn-success"
+          onclick="generateText()"
+        >
+          Generate Text
+        </button>
+      </div>
+    </form>
+    <div
+    class="modal fade"
+    id="buttonModal"
+    tabindex="-1"
+    aria-labelledby="buttonModalLabel"
+    aria-hidden="true"
+  >
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="buttonModalLabel">Add Option</h5>
+          <button
+            type="button"
+            class="btn-close"
+            data-bs-dismiss="modal"
+            aria-label="Close"
+          ></button>
+        </div>
+        <div class="modal-body">
+          <div class="mb-3">
+            <label for="titleInput" class="form-label">Option:</label>
+            <input type="text" class="form-control" id="optionInput" />
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button
+            type="button"
+            class="btn btn-secondary"
+            data-bs-dismiss="modal"
+          >
+            Close
+          </button>
+          <button
+            type="button"
+            class="btn btn-primary"
+            data-bs-dismiss="modal"
+            onclick="addOption()"
+          >
+            Add
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+    <div id="widget">
+      <img src="notes.png" alt="Widget Logo" />
+    </div>
+    <script src="reply_options_widget.js"></script>
+    <script src="reply_options.js"></script>
+  </body>
+</html>
