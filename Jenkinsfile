@@ -12,6 +12,7 @@ pipeline {
       steps {
         script {
           sh 'pwd'
+          sh 'ls -la'
         }
       }
     }
