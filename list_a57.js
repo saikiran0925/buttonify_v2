@@ -105,7 +105,7 @@ function generateJSON() {
       id: idValue,
       title: titleValue,
     };
-    if (descValue | descValue !== "undefined") {
+    if (typeof descValue !== 'undefined' && descValue !== '' ) {
       buttonObject["description"] = descValue;
     }
     rows.push(buttonObject);
