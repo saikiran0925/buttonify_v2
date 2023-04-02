@@ -3,6 +3,7 @@ var numButtons = 1;
 function removeButtonFunction(buttonNum) {
   var buttonToRemove = document.getElementById("button_" + buttonNum);
   buttonToRemove.remove();
+  numButtons--;
 }
 
 function addButton() {
