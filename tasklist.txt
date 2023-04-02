@@ -1,2 +1,1 @@
-In Replies Buttons, need to make proper div for each option.
 Need to customize widget according to button_a57dbo and list_a57do
