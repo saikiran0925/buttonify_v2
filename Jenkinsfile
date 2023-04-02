@@ -4,14 +4,15 @@ pipeline {
   stage('Stage 1') {
       steps {
         script {
-          echo 'Stage 1'
+          sh 'touch sample.txt'
         }
       }
     }
   stage('Stage 2') {
       steps {
         script {
-          echo 'Stage 2'
+          sh 'pwd'
+          sh 'ls -la'
         }
       }
     }
