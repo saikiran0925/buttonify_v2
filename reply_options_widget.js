@@ -45,7 +45,7 @@ textField.style.display = "none";
 widgetBox.appendChild(textField);
 
 const jsonifyButton = document.createElement("button");
-jsonifyButton.innerHTML = "JSONify";
+jsonifyButton.innerHTML = "Generate";
 jsonifyButton.style.margin = "10px 0 10px 150px"; // add a left margin of 20px
 jsonifyButton.style.padding = "10px 20px";
 jsonifyButton.style.borderRadius = "5px";
