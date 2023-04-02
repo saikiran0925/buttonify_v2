@@ -1,4 +1,5 @@
 numButtons = 1;
+var numReply = 0;
 
 function removeButtonFunction(buttonNum) {
   var buttonToRemove = document.getElementById("reply_" + buttonNum);
@@ -111,7 +112,6 @@ function generateTextFromString() {
 }
 
 function autoPopulate(line){
-    var numReply = 0;
     var repliesDiv = document.getElementById("replies");
 
     var reply = document.createElement("div");
