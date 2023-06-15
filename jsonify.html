@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>JSON Editor</title>
+    <link rel="stylesheet" href="jsonify.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="nav_bar.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.8/clipboard.min.js"></script>
+    <script
+    src="https://kit.fontawesome.com/b05a396040.js"
+    crossorigin="anonymous"
+  ></script>
+  </head>
+  <body>
+    <div class="navbar-ver">
+      <a href="index.html" title="Home">
+        <i class="fa-regular fa-hand-pointer"></i>
+        <span class="option-text">Buttonify</span>
+      </a>
+      <a href="jsonify.html" title="Search" class="active">
+        <i class="fa-regular fa-file-code"></i>
+        <span class="option-text">JSONify</span>
+      </a>
+    </div>
+    <div class="container">
+      <h1>JSONify</h1>
+      <div class="json-editor">
+        <textarea id="json-input" class="form-control" rows="10"></textarea>
+      </div>
+    </div>
+    <div class="button-group">
+      <button id="validate-btn" class="btn btn-primary">Validate</button>
+      <button id="format-btn" class="btn btn-primary">Format</button>
+      <button id="stringify-btn" class="btn btn-primary">Stringify</button>
+      <button id="save-btn" class="btn btn-primary">Save</button>
+      <button id="generate-btn" class="btn btn-primary">Generate JSON</button>
+    </div>
+
+    <!-- Modal -->
+    <div id="myModal" class="modal">
+      <div class="modal-content">
+        <div class="header">
+          <h2>Generated JSON</h2>
+          <button id="close-btn" class="btn btn-secondary">Close</button>
+        </div>
+        <textarea id="generated-json" class="form-control" rows="10"></textarea>
+        <div class="button-group">
+          <button id="copy-btn" class="btn btn-primary">
+            Copy to Clipboard
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <script src="jsonify.js"></script>
+  </body>
+</html>
