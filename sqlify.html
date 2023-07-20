@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SQLify</title>
+  <link rel="stylesheet" href="sqlify.css">
+  <link rel="stylesheet" href="index.css" />
+  <link rel="stylesheet" href="nav_bar.css" />
+  <script
+  src="https://kit.fontawesome.com/b05a396040.js"
+  crossorigin="anonymous"></script>  
+</head>
+
+<body>
+  <div class="navbar-ver">
+    <a href="index.html" title="Buttonify">
+      <i class="fa-regular fa-hand-pointer"></i>
+      <span class="option-text">Buttonify</span>
+    </a>
+    <a href="jsonify.html" title="JSONify">
+      <i class="fa-regular fa-file-code"></i>
+      <span class="option-text">JSONify</span>
+    </a>
+    <a href="sqlify.html" title="SQLify" class="active">
+      <i class="fa-solid fa-database"></i>
+      <span class="option-text">SQLify</span>
+    </a>
+  </div>
+  <h1>SQLify</h1>
+  <textarea id="sqlInput" placeholder="Paste your SQL query here"></textarea>
+  <div id="container">
+    <button id="formatButton">Format</button>
+    <button id="stringifyButton">Stringify</button>
+    <button id="copyButton">Copy</button>
+  </div>
+  <script src="sqlify.js"></script>
+</body>
+
+</html>
