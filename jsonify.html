@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>JSON Editor</title>
+    <title>JSONify</title>
     <link rel="stylesheet" href="jsonify.css" />
     <link
       rel="stylesheet"
@@ -34,36 +34,20 @@
         <i class="fa-solid fa-database"></i>
         <span class="option-text">SQLify</span>
       </a>
+      <a href="yamlify.html" title="YAMLify">
+        <i class="fa-brands fa-yammer"></i>
+        <span class="option-text">YAMLify</span>
+      </a>
     </div>
-    <div class="container">
-      <h1>JSONify</h1>
-      <div class="json-editor">
-        <textarea id="json-input" class="form-control" rows="10"></textarea>
-      </div>
+    <h3>JSONify</h3>
+    <textarea id="jsonInput" placeholder="Enter JSON here..."></textarea>
+    <div>
+      <button id="validateButton" class="actionButton">Validate</button>
+      <button id="formatButton" class="actionButton">Format</button>
+      <button id="stringButton" class="actionButton">String</button>
+      <button id="copyButton" class="actionButton">Copy</button>
     </div>
-    <div class="button-group">
-      <button id="validate-btn" class="btn btn-primary">Validate</button>
-      <button id="format-btn" class="btn btn-primary">Format</button>
-      <button id="stringify-btn" class="btn btn-primary">Stringify</button>
-      <button id="save-btn" class="btn btn-primary">Save</button>
-      <button id="generate-btn" class="btn btn-primary">Generate JSON</button>
-    </div>
-
-    <!-- Modal -->
-    <div id="myModal" class="modal">
-      <div class="modal-content">
-        <div class="header">
-          <h2>Generated JSON</h2>
-          <button id="close-btn" class="btn btn-secondary">Close</button>
-        </div>
-        <textarea id="generated-json" class="form-control" rows="10"></textarea>
-        <div class="button-group">
-          <button id="copy-btn" class="btn btn-primary">
-            Copy to Clipboard
-          </button>
-        </div>
-      </div>
-    </div>
+    <div id="validationMessage"></div>
 
     <script src="jsonify.js"></script>
   </body>

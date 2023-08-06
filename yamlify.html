@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>YAMLify</title>
+  <link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+/>
+<link rel="stylesheet" href="style.css" />
+<link rel="stylesheet" href="nav_bar.css" />
+<link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+/>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.8/clipboard.min.js"></script>
+<script
+src="https://kit.fontawesome.com/b05a396040.js"
+crossorigin="anonymous"
+></script>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      margin: 50px;
+    }
+
+    #yamlInput {
+      width: 80%;
+      height: 600px;
+      font-size: 14px; 
+      padding: 10px;
+      margin-bottom: 20px;
+    }
+
+    #validateButton {
+      background-color: #4CAF50;
+      color: white;
+      padding: 10px 20px;
+      font-size: 16px;
+      border: none;
+      cursor: pointer;
+    }
+
+    #validateButton:hover {
+      background-color: #45a049;
+    }
+
+    #result {
+      margin-top: 20px;
+    }
+
+    #result p {
+      font-size: 16px;
+    }
+    .flex-container {
+      display: flex;
+      justify-content: center;
+    }
+  </style>
+</head>
+<body>
+  <div class="navbar-ver">
+    <a href="index.html" title="Home">
+      <i class="fa-regular fa-hand-pointer"></i>
+      <span class="option-text">Buttonify</span>
+    </a>
+    <a href="jsonify.html" title="Search">
+      <i class="fa-regular fa-file-code"></i>
+      <span class="option-text">JSONify</span>
+    </a>
+    <a href="sqlify.html" title="SQLify" >
+      <i class="fa-solid fa-database"></i>
+      <span class="option-text">SQLify</span>
+    </a>
+    <a href="yamlify.html" title="YAMLify" class="active">
+      <i class="fa-brands fa-yammer"></i>
+      <span class="option-text">YAMLify</span>
+    </a>
+  </div>
+  <h4>YAMLify</h4>
+  <textarea id="yamlInput" rows="10" cols="50"></textarea>
+  <div class="flex-container">
+    <button id="validateButton">Validate</button>
+  </div>
+  <div id="result"></div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/js-yaml/4.0.0/js-yaml.min.js"></script>
+  <script>
+    const validateButton = document.getElementById('validateButton');
+    const yamlInput = document.getElementById('yamlInput');
+    const resultDiv = document.getElementById('result');
+
+    validateButton.addEventListener('click', () => {
+      const yamlContent = yamlInput.value;
+
+      try {
+        const parsedYaml = jsyaml.load(yamlContent);
+        resultDiv.innerHTML = '<p style="color: green;">YAML is valid!</p>';
+        console.log(parsedYaml);
+      } catch (error) {
+        resultDiv.innerHTML = `<p style="color: red;">Error: ${error.message}</p>`;
+      }
+    });
+  </script>
+</body>
+</html>
